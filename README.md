@@ -18,7 +18,7 @@ pip install -r requirements.txt
 ## File Structure
 1. mlp/ Directory:
 
-	- This folder will store your custom MLP class and related code. It keeps your implementation modular and reusable.
+	- This folder will store the custom MLP class and related code. It keeps the implementation modular and reusable.
 
 	- File: mlp.py: Contains the MLP class definition.
 
@@ -29,7 +29,7 @@ pip install -r requirements.txt
 	- The entry point of your project. You’ll import the MLP class here and write training, evaluation, and testing logic.
 3. requirements.txt:
 
-	- Lists project dependencies. Since you’re using Conda, this file is optional unless you plan to share or deploy your project.
+	- Lists project dependencies.
 4. .gitignore:
 
 	- Prevents unnecessary or sensitive files (e.g., __pycache__/, *.pyc, *.env) from being tracked by Git.

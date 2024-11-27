@@ -1,0 +1,16 @@
+Epoch 1000, Error: 1.013291627830447
+Epoch 2000, Error: 1.0127699219488635
+Epoch 3000, Error: 1.012231599857543
+Epoch 4000, Error: 1.0116242194194676
+Epoch 5000, Error: 1.0107314122495916
+Epoch 6000, Error: 1.0080955533386387
+Epoch 7000, Error: 0.9837784528538487
+Epoch 8000, Error: 0.8150375125287757
+Epoch 9000, Error: 0.5668504863718817
+Epoch 10000, Error: 0.2581296029009137
+
+Testing the MLP on XOR data:
+Input: [0, 0], Predicted: [0.168], Target: [0]
+Input: [0, 1], Predicted: [0.769], Target: [1]
+Input: [1, 0], Predicted: [0.753], Target: [1]
+Input: [1, 1], Predicted: [0.335], Target: [0]

@@ -67,3 +67,33 @@ class MLP:
 
         # Compute and return mean squared error
         return np.mean(output_error**2)
+    
+    def train(self, training_data, targets, epochs, learning_rate):
+        for epoch in range(epochs):
+            total_error = 0
+            for input_vector, target in zip(training_data, targets):
+                self.forward(input_vector)
+                error = self.backward(target, learning_rate)
+                total_error += error
+            # Added print every 1000, as printing every epoch seems excessive in this scenario
+            if (epoch + 1) % 1000 == 0:
+                print(f"Epoch {epoch + 1}, Error: {total_error}")
+
+    def evaluate(self, test_data, test_targets):
+        total_error = 0
+        correct_predictions = 0
+        for input_vector, target in zip(test_data, test_targets):
+            output = self.forward(input_vector)
+            total_error += np.mean((output - target) ** 2)
+            # Use self.num_outputs instead of self.NO
+            predicted = np.argmax(output) if self.num_outputs > 1 else output
+            actual = np.argmax(target) if self.num_outputs > 1 else target
+            if np.argmax(output) == np.argmax(target) if self.num_outputs > 1 else output == target:
+                correct_predictions += 1
+        average_error = total_error / len(test_data)
+        accuracy = correct_predictions / len(test_data)
+        return average_error, accuracy
+
+
+
+
