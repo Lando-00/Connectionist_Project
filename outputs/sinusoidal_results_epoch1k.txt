@@ -1,0 +1,7 @@
+
+=== Sinusoidal Regression ===
+
+Training MLP on Sinusoidal data...
+Epoch 1000, Error: 1.2254586814199584
+Training Error (MSE): 0.003004286424042133
+Testing Error (MSE): 0.013292002865113738
